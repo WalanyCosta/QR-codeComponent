@@ -1,26 +1,37 @@
+:root{
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 63%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-color: hsl(220, 15%, 55%);
-    font-family: 'Outfit', sans-serif;
-    font-size: 65,9%;
-  }
+html{
+  font-size: 100%;
+}
 
-  main{
-    display: flex;
-    justify-content: center;
-  }
+body {
+  background-color: var(--Grayish-blue);
+  font-family: 'Outfit', sans-serif;
+ 
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
 
   main .cardContainer{
     width: 100%;
     max-width: 350px;
     margin: 8px auto;
     padding: 16px 16px 32px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--White);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,13 +48,39 @@
   }
 
   .cardContainer .content > h1{
-    color: hsl(218, 44%, 22%);
+    color: var(--Dark-blue);
     text-align: center;
+    font-size: 2rem;
     margin-bottom: 16px;
+
   }
 
   .cardContainer .content > p{
-    color: hsl(0, 0%, 71%);
-    font-size: 1.1rem;
+    color: var(--Light-gray);
+    font-size: 1rem;
     text-align: center;
   }
+
+@media  (max-width: 375px) {
+    html{
+      font-size: 70%;  
+    }
+
+    body{
+        font-size: 10%;
+    }
+
+    main{
+        padding: 10px 16px;
+    }
+
+    main .cardContainer{
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .cardContainer .content{
+        padding: 0 16px;
+    }
+
+}
